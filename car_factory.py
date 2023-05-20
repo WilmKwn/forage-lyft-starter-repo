@@ -11,18 +11,23 @@ class CarFactory:
     def __init__(self):
         pass
 
+    @staticmethod
     def create_calliope(current_date, last_service_date, current_mileage, last_service_mileage):
         return Car(last_service_date, CapuletEngine(last_service_date, current_mileage, last_service_mileage), SpindlerBattery(last_service_date, current_date))
     
+    @staticmethod
     def create_glissade(current_date, last_service_date, current_mileage, last_service_mileage):
         return Car(last_service_date, WilloughbyEngine(last_service_date, current_mileage, last_service_mileage), SpindlerBattery(last_service_date, current_date))
     
+    @staticmethod
     def create_palindrome(current_date, last_service_date, warning_light_on):
         return Car(last_service_date, SternmanEngine(last_service_date, warning_light_on), SpindlerBattery(last_service_date, current_date))
     
+    @staticmethod
     def create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage):
         return Car(last_service_date, WilloughbyEngine(last_service_date, current_mileage, last_service_mileage), NubbinBattery(last_service_date, current_date))
     
+    @staticmethod
     def create_thovex(current_date, last_service_date, current_mileage, last_service_mileage):
         return Car(last_service_date, CapuletEngine(last_service_date, current_mileage, last_service_mileage), NubbinBattery(last_service_date, current_date))
     
