@@ -1,10 +1,12 @@
-from serviceable import Serviceable 
+from serviceable import Serviceable
+
+
 
 class Car(Serviceable):
-    def __init__(self, last_service_date):
+    def __init__(self, last_service_date, engine, battery):
         self.last_service_date = last_service_date
-        self.engine = None
-        self.battery = None
+        self.engine = engine
+        self.battery = battery
 
     def needs_service(self):
-        pass
+        return self.engine.needs_service() or self.battery.needs_service()
